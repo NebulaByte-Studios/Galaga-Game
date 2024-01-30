@@ -1,14 +1,14 @@
 import os
 import random
-
+import asyncio
+print("-----------------------------------")
+print("--------Verifying  packages--------")
 try:
 	import pygame
-	import asyncio
 except ImportError:
-	print("___Downloading and verifying packages___")
-	yn = input("___Do you want to download them [Y/n]___")
+	print("---Downloading  missing packages---")        
+	yn = input("---Do you want to download [Y/n]---")
 	if yn.lower() == "y":
 		os.system("pip install pygame")
-		os.system("pip install asyncio")
 	else:
 		print("Abort quitting the programm")
