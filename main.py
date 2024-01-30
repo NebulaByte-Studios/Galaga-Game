@@ -18,6 +18,7 @@ except ImportError:
 
 import pygame
 
+# Création de la fenêtre
 x = 1080
 y = 720
 
