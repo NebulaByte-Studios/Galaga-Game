@@ -1,6 +1,6 @@
 import os
 import random
-import asyncio
+import asyncio eu
 print("-----------------------------------")
 print("--------Verifying  packages--------")
 try:
@@ -12,3 +12,6 @@ except ImportError:
 		os.system("pip install pygame")
 	else:
 		print("Abort quitting the programm")
+        
+class GamePlay:
+    pass
