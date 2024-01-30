@@ -6,15 +6,18 @@ import asyncio
 print("-----------------------------------")
 print("--------Verifying  packages--------")
 try:
-	import pygame
+    import pygame
 except ImportError:
-	print("---Downloading  missing packages---")        
-	yn = input("---Do you want to download [Y/n]---")
-	if yn.lower() == "y":
-		os.system("pip install pygame")
-	else:
-		print("Abort quitting the programm")
-		exit()
+    print("---Downloading  missing packages---")
+    yn = input("---Do you want to download [Y/n]---")
+    if yn.lower() == "y":
+        os.system("pip install pygame")
+    else:
+        print("Abort quitting the programm")
+        exit()
+
+print("-All packages  has been downloaded-")
+print("----------Launching  game----------")
 
 import pygame
 
