@@ -1,6 +1,8 @@
 import os
 import random
-import asyncio eu
+import asyncio
+
+# Vérif des packages
 print("-----------------------------------")
 print("--------Verifying  packages--------")
 try:
@@ -12,6 +14,22 @@ except ImportError:
 		os.system("pip install pygame")
 	else:
 		print("Abort quitting the programm")
-        
-class GamePlay:
-    pass
+
+x = 1080
+y = 720
+
+screen = pygame.display.set_mode((x, y))
+
+pygame.display.set_caption("Galaga")
+
+
+pygame.init()
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+
+pygame.quit()
