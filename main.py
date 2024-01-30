@@ -14,6 +14,9 @@ except ImportError:
 		os.system("pip install pygame")
 	else:
 		print("Abort quitting the programm")
+		exit()
+
+import pygame
 
 x = 1080
 y = 720
