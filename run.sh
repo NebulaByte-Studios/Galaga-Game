@@ -1,1 +1,1 @@
-python3 jeu.py
+python3 main.py
