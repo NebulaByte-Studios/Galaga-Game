@@ -21,7 +21,29 @@ print("----------Launching  game----------")
 
 import pygame
 
-# Création de la fenêtre
+playerSpaceShip = pygame.image.load("/home/monntheboss/jeu/spaceship.png")
+
+class Player:
+    global playerSpaceShip
+    def __init__(self):
+        self.player = playerSpaceShip
+        self.movex = 25
+
+    def display(self):
+        screen.fill((0, 0, 0))
+        screen.blit(playerSpaceShip, (self.movex, 600))
+
+    def move(self):
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            self.movex -= 3
+        if keys[pygame.K_RIGHT]:
+            self.movex += 3
+    def run(self):
+        self.display()
+        self.move()
+
+
 x = 1080
 y = 720
 
@@ -29,14 +51,20 @@ screen = pygame.display.set_mode((x, y))
 
 pygame.display.set_caption("Galaga")
 
+player = Player()
+
 
 pygame.init()
 
 running = True
 while running:
+    player.run()
+    pygame.display.flip()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+            
 
 
 pygame.quit()
+
